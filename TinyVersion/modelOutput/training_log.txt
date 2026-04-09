@@ -1,0 +1,40 @@
+TinyVision Training Log (with autoresearch optimizations)
+======================================================================
+Optimizations: softcap(1) + lr_schedule(2) + zero_wd(3) + 2D-RoPE(4) + Muon(5) + gated-residuals(6)
+Device: cuda
+Model params: 2,578,544  (~2.58M)
+n_regions=64  top_k=4  pool_size=4
+Total epochs: 30  Total time: 674s
+Best val loss: 0.0829
+======================================================================
+
+[  1/30] lr=6.67e-07 | train  loss=1.476  obj=0.094  box=0.069  cls=0.373  rt=1.490 | route_acc(tr)=0.53  det_acc(tr)=0.92 | val  loss=0.401  route_acc=0.74  det_acc=0.99 | 23s
+[  2/30] lr=1.00e-06 | train  loss=0.326  obj=0.013  box=0.013  cls=0.041  rt=0.596 | route_acc(tr)=0.79  det_acc(tr)=0.99 | val  loss=0.273  route_acc=0.83  det_acc=0.99 | 45s
+[  3/30] lr=1.00e-06 | train  loss=0.227  obj=0.009  box=0.009  cls=0.027  rt=0.431 | route_acc(tr)=0.85  det_acc(tr)=0.99 | val  loss=0.228  route_acc=0.86  det_acc=0.99 | 67s
+[  4/30] lr=1.00e-06 | train  loss=0.173  obj=0.008  box=0.007  cls=0.019  rt=0.332 | route_acc(tr)=0.88  det_acc(tr)=1.00 | val  loss=0.173  route_acc=0.89  det_acc=0.99 | 90s
+[  5/30] lr=1.00e-06 | train  loss=0.149  obj=0.007  box=0.006  cls=0.015  rt=0.290 | route_acc(tr)=0.89  det_acc(tr)=1.00 | val  loss=0.157  route_acc=0.88  det_acc=1.00 | 112s
+[  6/30] lr=1.00e-06 | train  loss=0.124  obj=0.006  box=0.005  cls=0.012  rt=0.241 | route_acc(tr)=0.91  det_acc(tr)=1.00 | val  loss=0.161  route_acc=0.90  det_acc=0.99 | 134s
+[  7/30] lr=1.00e-06 | train  loss=0.105  obj=0.006  box=0.005  cls=0.008  rt=0.210 | route_acc(tr)=0.92  det_acc(tr)=1.00 | val  loss=0.133  route_acc=0.92  det_acc=1.00 | 156s
+[  8/30] lr=1.00e-06 | train  loss=0.101  obj=0.005  box=0.004  cls=0.007  rt=0.211 | route_acc(tr)=0.92  det_acc(tr)=1.00 | val  loss=0.137  route_acc=0.92  det_acc=0.99 | 179s
+[  9/30] lr=1.00e-06 | train  loss=0.091  obj=0.005  box=0.004  cls=0.006  rt=0.187 | route_acc(tr)=0.92  det_acc(tr)=1.00 | val  loss=0.136  route_acc=0.91  det_acc=1.00 | 202s
+[ 10/30] lr=1.00e-06 | train  loss=0.086  obj=0.005  box=0.004  cls=0.004  rt=0.186 | route_acc(tr)=0.92  det_acc(tr)=1.00 | val  loss=0.119  route_acc=0.92  det_acc=1.00 | 225s
+[ 11/30] lr=1.00e-06 | train  loss=0.077  obj=0.004  box=0.003  cls=0.004  rt=0.161 | route_acc(tr)=0.93  det_acc(tr)=1.00 | val  loss=0.135  route_acc=0.91  det_acc=1.00 | 247s
+[ 12/30] lr=1.00e-06 | train  loss=0.076  obj=0.004  box=0.003  cls=0.005  rt=0.159 | route_acc(tr)=0.93  det_acc(tr)=1.00 | val  loss=0.110  route_acc=0.92  det_acc=1.00 | 270s
+[ 13/30] lr=1.00e-06 | train  loss=0.073  obj=0.004  box=0.003  cls=0.005  rt=0.147 | route_acc(tr)=0.94  det_acc(tr)=1.00 | val  loss=0.122  route_acc=0.93  det_acc=1.00 | 292s
+[ 14/30] lr=1.00e-06 | train  loss=0.071  obj=0.004  box=0.003  cls=0.006  rt=0.143 | route_acc(tr)=0.94  det_acc(tr)=1.00 | val  loss=0.101  route_acc=0.93  det_acc=0.99 | 315s
+[ 15/30] lr=1.00e-06 | train  loss=0.066  obj=0.004  box=0.003  cls=0.003  rt=0.140 | route_acc(tr)=0.94  det_acc(tr)=1.00 | val  loss=0.104  route_acc=0.92  det_acc=1.00 | 337s
+[ 16/30] lr=9.89e-07 | train  loss=0.058  obj=0.003  box=0.002  cls=0.001  rt=0.135 | route_acc(tr)=0.94  det_acc(tr)=1.00 | val  loss=0.101  route_acc=0.93  det_acc=1.00 | 359s
+[ 17/30] lr=9.57e-07 | train  loss=0.052  obj=0.003  box=0.002  cls=0.001  rt=0.119 | route_acc(tr)=0.95  det_acc(tr)=1.00 | val  loss=0.096  route_acc=0.93  det_acc=1.00 | 382s
+[ 18/30] lr=9.05e-07 | train  loss=0.052  obj=0.003  box=0.002  cls=0.001  rt=0.124 | route_acc(tr)=0.94  det_acc(tr)=1.00 | val  loss=0.094  route_acc=0.93  det_acc=1.00 | 404s
+[ 19/30] lr=8.35e-07 | train  loss=0.046  obj=0.002  box=0.001  cls=0.001  rt=0.109 | route_acc(tr)=0.95  det_acc(tr)=1.00 | val  loss=0.101  route_acc=0.92  det_acc=1.00 | 427s
+[ 20/30] lr=7.50e-07 | train  loss=0.044  obj=0.002  box=0.001  cls=0.001  rt=0.108 | route_acc(tr)=0.95  det_acc(tr)=1.00 | val  loss=0.089  route_acc=0.93  det_acc=1.00 | 449s
+[ 21/30] lr=6.55e-07 | train  loss=0.036  obj=0.002  box=0.001  cls=0.000  rt=0.086 | route_acc(tr)=0.96  det_acc(tr)=1.00 | val  loss=0.089  route_acc=0.94  det_acc=1.00 | 471s
+[ 22/30] lr=5.52e-07 | train  loss=0.032  obj=0.002  box=0.001  cls=0.000  rt=0.081 | route_acc(tr)=0.96  det_acc(tr)=1.00 | val  loss=0.089  route_acc=0.93  det_acc=1.00 | 494s
+[ 23/30] lr=4.48e-07 | train  loss=0.031  obj=0.001  box=0.001  cls=0.000  rt=0.079 | route_acc(tr)=0.96  det_acc(tr)=1.00 | val  loss=0.085  route_acc=0.94  det_acc=1.00 | 516s
+[ 24/30] lr=3.45e-07 | train  loss=0.026  obj=0.001  box=0.001  cls=0.000  rt=0.065 | route_acc(tr)=0.96  det_acc(tr)=1.00 | val  loss=0.085  route_acc=0.94  det_acc=1.00 | 539s
+[ 25/30] lr=2.50e-07 | train  loss=0.023  obj=0.001  box=0.000  cls=0.000  rt=0.059 | route_acc(tr)=0.96  det_acc(tr)=1.00 | val  loss=0.085  route_acc=0.94  det_acc=1.00 | 561s
+[ 26/30] lr=1.65e-07 | train  loss=0.021  obj=0.001  box=0.000  cls=0.000  rt=0.056 | route_acc(tr)=0.97  det_acc(tr)=1.00 | val  loss=0.083  route_acc=0.94  det_acc=1.00 | 584s
+[ 27/30] lr=9.55e-08 | train  loss=0.020  obj=0.001  box=0.000  cls=0.000  rt=0.054 | route_acc(tr)=0.97  det_acc(tr)=1.00 | val  loss=0.085  route_acc=0.94  det_acc=1.00 | 606s
+[ 28/30] lr=4.32e-08 | train  loss=0.020  obj=0.001  box=0.000  cls=0.000  rt=0.053 | route_acc(tr)=0.97  det_acc(tr)=1.00 | val  loss=0.088  route_acc=0.94  det_acc=1.00 | 629s
+[ 29/30] lr=1.09e-08 | train  loss=0.019  obj=0.001  box=0.000  cls=0.000  rt=0.052 | route_acc(tr)=0.97  det_acc(tr)=1.00 | val  loss=0.088  route_acc=0.94  det_acc=1.00 | 651s
+[ 30/30] lr=0.00e+00 | train  loss=0.019  obj=0.000  box=0.000  cls=0.000  rt=0.052 | route_acc(tr)=0.97  det_acc(tr)=1.00 | val  loss=0.088  route_acc=0.94  det_acc=1.00 | 674s
